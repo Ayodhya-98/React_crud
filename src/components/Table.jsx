@@ -49,7 +49,7 @@ export const Table=()=>{
                     <td>Page 3</td>
                     <td>This is the third page</td>
                     <td>
-                        <span className="label label-draft">Draft</span>
+                        <span className="label label-draft">draft</span>
                     </td>
                     <td>
                     <span className="actions">
