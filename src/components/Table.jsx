@@ -1,16 +1,16 @@
 import React from "react";
 
-import{BsFillTrashFill,BsFillPencilFill} from "rect-icons/bs"
+
 
 import "./Table.css";
 
 export const Table=()=>{
-    return<dev>
-        <table>
+    return<dev className="table-wrapper">
+        <table className="table">
             <thead>
                 <tr>
                     <th>Page</th>
-                    <th>description</th>
+                    <th className="expand">Description</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -20,14 +20,25 @@ export const Table=()=>{
                     <td>Home</td>
                     <td>This is the main page</td>
                     <td>
-                        <span>Live</span>
+                        <span className="label label-live">Live</span>
                     </td>
                     <td>
-                        <span>
-                            <BsFillTrashFill/>
-                            <BsFillPencilFill/>
-
-                        </span>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Page 2</td>
+                    <td>This is the second page</td>
+                    <td>
+                        <span className="label label-draft">Draft</span>
+                    </td>
+                    <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                        
                     </td>
                 </tr>
             </tbody>
