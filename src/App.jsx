@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import {Table} from "./components/Table"
 
 function App() {
   return (
-    <div className="App">Hello World !
+    <div className="App">
+      <Table/>
       
     </div>
   );
