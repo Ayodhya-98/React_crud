@@ -54,7 +54,7 @@ export const Table=()=>{
                     <td>
                     <span className="actions">
                     <button>Edit</button>
-                    <button>delete</button>
+                    <button>Delete</button>
                     </span>
                         
                     </td>
