@@ -23,9 +23,10 @@ export const Table=()=>{
                         <span className="label label-live">Live</span>
                     </td>
                     <td>
+                    <span className="actions">
                     <button>Edit</button>
                     <button>Delete</button>
-                        
+                        </span>
                     </td>
                 </tr>
                 
@@ -36,8 +37,25 @@ export const Table=()=>{
                         <span className="label label-draft">Draft</span>
                     </td>
                     <td>
+                    <span className="actions">
                     <button>Edit</button>
                     <button>Delete</button>
+                    </span>
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Page 3</td>
+                    <td>This is the third page</td>
+                    <td>
+                        <span className="label label-draft">Draft</span>
+                    </td>
+                    <td>
+                    <span className="actions">
+                    <button>Edit</button>
+                    <button>delete</button>
+                    </span>
                         
                     </td>
                 </tr>
