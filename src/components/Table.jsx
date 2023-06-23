@@ -24,8 +24,8 @@ export const Table=()=>{
                     </td>
                     <td>
                     <span className="actions">
-                    <button>Edit</button>
                     <button>Delete</button>
+                    <button>Edit</button>
                         </span>
                     </td>
                 </tr>
@@ -38,8 +38,8 @@ export const Table=()=>{
                     </td>
                     <td>
                     <span className="actions">
-                    <button>Edit</button>
                     <button>Delete</button>
+                    <button>Edit</button>
                     </span>
                         
                     </td>
@@ -53,8 +53,8 @@ export const Table=()=>{
                     </td>
                     <td>
                     <span className="actions">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button className="delete-btn">Delete</button>
+                    <button>edit</button>
                     </span>
                         
                     </td>
