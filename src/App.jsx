@@ -12,8 +12,15 @@ function App() {
   return (
     <div className="App">
       <Table/>
-      <button className='btn' onClick={()=>setModalOpen(true)}>Add</button>
-      {modalOpen && <Modal/>}
+      <button className='btn' onClick={()=>setModalOpen(true)}>
+        Add
+        </button>
+      {modalOpen && (
+      <Modal 
+        closeModal={()=>{
+          setModalOpen(false);
+      }}
+      />
       
     </div>
   );
