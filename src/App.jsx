@@ -11,7 +11,7 @@ function App() {
   const [modalOpen, setModalOpen] =useState(false);
 
 const rows=[
-  (page:"Page 1",description:"This is the First page",status:"live")
+  (page:"Page 1",description:"This is the first page",status:"live")
 
 ];
 
