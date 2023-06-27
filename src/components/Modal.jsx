@@ -2,9 +2,13 @@ import React from "react";
 
 import "./Modal.css";
 
-export const Modal=()=>{
-    return <div className="modal-container"> 
-        <div className="modal">
+export const Modal=({closerModal})=>{
+    return <div className="modal-container" 
+    onClick={(e)=>{
+        if(e.target.className==="modal-container")
+    closeModal}}
+> 
+        <div className="modal" >
             <form>
                 <div className="form-group">
                     <label htmlFor="page">Page</label>
