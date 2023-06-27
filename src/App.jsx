@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Table/>
-      <button className='btn'>Add</button>
+      <button className='btn' onClick={()=>setModalOpen(true)}>Add</button>
       {modalOpen && <Modal/>}
       
     </div>

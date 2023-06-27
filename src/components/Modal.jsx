@@ -22,7 +22,7 @@ export const Modal=()=>{
                         <option value="error">Error</option>
                     </select>
                 </div>
-                <button type="submit" classname="btn">Submit</button>
+                <button type="submit" className="btn">Submit</button>
             </form>
         </div>
     </div>;
