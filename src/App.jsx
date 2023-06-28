@@ -13,7 +13,7 @@ function App() {
 const rows=[
   (page:"Page 1",description:"This is the first page",status:"live")
 
-];
+]
 
   return (
     <div className="App">
