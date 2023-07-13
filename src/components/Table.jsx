@@ -4,7 +4,7 @@ import React from "react";
 
 import "./Table.css";
 
-export const Table=()=>{
+export const Table=({rows})=>{
     return<dev className="table-wrapper">
         <table className="table">
             <thead>
@@ -16,6 +16,14 @@ export const Table=()=>{
                 </tr>
             </thead>
             <tbody>
+                {
+                    rows.map((row,idx) =>{
+                        return<tr key={idx}>
+                            <td>{row.page}</td>
+                            <td className="expand">{row.description}</td>
+                        </tr>
+                    })
+                }
                 <tr>
                     <td>Home</td>
                     <td>This is the main page</td>

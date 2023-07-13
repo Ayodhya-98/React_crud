@@ -19,7 +19,7 @@ const rows=[
 
   return (
     <div className="App">
-      <Table/>
+      <Table rows={rows}/>
       <button className='btn' onClick={()=>setModalOpen(true)}>
         Add
         </button>
