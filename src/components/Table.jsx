@@ -10,7 +10,7 @@ export const Table=({rows})=>{
             <thead>
                 <tr>
                     <th>Page</th>
-                    <th className="expand">description</th>
+                    <th className="expand">Description</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
