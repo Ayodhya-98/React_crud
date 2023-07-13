@@ -11,11 +11,13 @@ function App() {
   const [modalOpen, setModalOpen] =useState(false);
 
 const rows=[
-  {page:"Page 1",description:"This is the first page",status:"live"}
+  {page:"Page 1",description:"This is the first page",status:"live"},
+  {page:"Page 2",description:"This is the Second page",status:"draft"},
+  {page:"Page 3",description:"This is the third page",status:"error"},
 
 ]
 
-  return 
+  return (
     <div className="App">
       <Table/>
       <button className='btn' onClick={()=>setModalOpen(true)}>
@@ -26,7 +28,8 @@ const rows=[
         closeModal={()=>{
           setModalOpen(false);
       }}
-      
+      />
+      )}
       
     </div>
   );
