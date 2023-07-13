@@ -31,7 +31,7 @@ export const Table=({rows})=>{
                     <td>Home</td>
                     <td>This is the main page</td>
                     <td>
-                        <span className="label label-live">Live</span>
+                        <span className="label label-live">live</span>
                     </td>
                     <td>
                     <span className="actions">
