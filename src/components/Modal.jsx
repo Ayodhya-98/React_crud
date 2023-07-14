@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 
 import "./Modal.css";
 
 export const Modal=({closerModal})=>{
+    const[formState,setFormState]=UseState({
+        page:"",
+        description:"",
+        status:"live"
+    });
     return <div className="modal-container" 
     onClick={(e)=>{
         if(e.target.className==="modal-container")
