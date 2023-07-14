@@ -17,9 +17,13 @@ const [rows,setRows]=useState([
 
 ]);
 
+const handleDeleteRows=(targetIndex)=>{
+  setRows(rows.filter((_,idx)=>idx !==targetIndex))
+}
+
   return (
     <div className="App">
-      <Table rows={rows}/>
+      <Table rows={rows} deleteRow={handleDeleteRows}/>
       <button className='btn' onClick={()=>setModalOpen(true)}>
         Add
         </button>

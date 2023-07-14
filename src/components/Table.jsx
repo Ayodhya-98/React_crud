@@ -4,7 +4,7 @@ import React from "react";
 
 import "./Table.css";
 
-export const Table=({rows})=>{
+export const Table=({rows,deleteRow})=>{
     return<dev className="table-wrapper">
         <table className="table">
             <thead>
@@ -28,7 +28,7 @@ export const Table=({rows})=>{
                     </td>
                     <td>
                     <span className="actions">
-                    <button className="delete-btn">Delete</button>
+                    <button className="delete-btn" onClick={()=>deleteRow(idx)}>Delete</button>
                     <button>Edit</button>
                         </span>
                     </td>
