@@ -22,7 +22,13 @@ export const Table=({rows})=>{
                         <td>{row.page}</td>
                          <td className="expand">{row.description}</td>
                          <td>
-                        <span className="label label-live">Live</span>
+                        <span className={`label label-${row.status}`}>{row.status}</span>
+                    </td>
+                    <td>
+                    <span className="actions">
+                    <button className="delete-btn">Delete</button>
+                    <button>Edit</button>
+                        </span>
                     </td>
                       </tr>  
                     })
