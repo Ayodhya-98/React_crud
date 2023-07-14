@@ -17,14 +17,14 @@ export const Table=({rows})=>{
             </thead>
             <tbody>
                 {
-                    rows.map((row,idx) =>{
-                        return<tr key={idx}>
-                            <td>{row.page}</td>
-                            <td className="expand">{row.description}</td>
-                            <td>
-                        <span className={"label label-${row.status}"}>{row.status}</span>
+                    rows.map((row,idx)=>{
+                      return <tr key={idx}>
+                        <td>{row.page}</td>
+                         <td className="expand">{row.description}</td>
+                         <td>
+                        <span className="label label-live">Live</span>
                     </td>
-                        </tr>
+                      </tr>  
                     })
                 }
                 <tr>
