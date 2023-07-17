@@ -19,6 +19,10 @@ const [rows,setRows]=useState([
 
 const handleDeleteRows=(targetIndex)=>{
   setRows(rows.filter((_,idx)=>idx !==targetIndex))
+};
+
+const handleSubmit =(newRow) =>{
+  setRows([...rows,newRow])
 }
 
   return (
@@ -32,6 +36,7 @@ const handleDeleteRows=(targetIndex)=>{
         closeModal={()=>{
           setModalOpen(false);
       }}
+      onSubmit={handleSubmit}
       />
       )}
       

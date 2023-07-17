@@ -2,7 +2,7 @@ import React,{useState} from "react";
 
 import "./Modal.css";
 
-export const Modal=({closerModal})=>{
+export const Modal=({closerModal,onSubmit})=>{
     const[formState,setFormState]=useState({
         page:"",
         description:"",
@@ -21,7 +21,9 @@ export const Modal=({closerModal})=>{
     const handleSubmit =(e) =>{
         e.preventDefault();
 
-        console.log(formState);
+        onSubmit(formState)
+
+        closerModal();
     };
 
     return <div className="modal-container" 
@@ -51,7 +53,7 @@ export const Modal=({closerModal})=>{
                         <option value="error">Error</option>
                     </select>
                 </div>
-                <button type="submit" className="btn">Submit</button>
+                <button type="submit" className="btn" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     </div>;
