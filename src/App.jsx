@@ -30,8 +30,15 @@ const handleEditRow =(idx)=>{
 }
 
 const handleSubmit =(newRow) =>{
-  setRows([...rows,newRow])
-}
+  rowToEdit===null
+  ?setRows([...rows,newRow])
+  :setRows(
+    rows.map((currRow,idx)=>{
+    if(idx!==rowToEdit)return currRow;
+    return newRow;
+  })
+  );
+};
 
   return (
     <div className="App">
