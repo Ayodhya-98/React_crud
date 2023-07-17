@@ -15,12 +15,19 @@ export const Modal=({closerModal})=>{
         setFormState({
             ...formState,
             [e.target.name]:e.target.value
-        })
-    }
+        });
+    };
+
+    const handleSubmit =(e) =>{
+        e.preventDefault();
+
+        console.log(formState);
+    };
+
     return <div className="modal-container" 
     onClick={(e)=>{
-        if(e.target.className==="modal-container")
-    closerModal}}
+        if(e.target.className==="modal-container") closerModal();
+    }}
 > 
         <div className="modal" >
             <form>
