@@ -50,6 +50,7 @@ const handleSubmit =(newRow) =>{
       <Modal 
         closeModal={()=>{
           setModalOpen(false);
+          setRowToEdit(null);
       }}
       onSubmit={handleSubmit}
       defaultValue={rowToEdit!==null &&rows[rowToEdit]}
