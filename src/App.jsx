@@ -17,9 +17,17 @@ const [rows,setRows]=useState([
 
 ]);
 
+const[rowToEdit,setRowToEdit]=useState(null)
+
 const handleDeleteRows=(targetIndex)=>{
   setRows(rows.filter((_,idx)=>idx !==targetIndex))
 };
+
+const handleEditRow =(idx)=>{
+  setRowToEdit(idx);
+
+  setModalOpen(true);
+}
 
 const handleSubmit =(newRow) =>{
   setRows([...rows,newRow])
@@ -27,7 +35,7 @@ const handleSubmit =(newRow) =>{
 
   return (
     <div className="App">
-      <Table rows={rows} deleteRow={handleDeleteRows}/>
+      <Table rows={rows} deleteRow={handleDeleteRows} editRow={handleEditRow} />
       <button className='btn' onClick={()=>setModalOpen(true)}>
         Add
         </button>
@@ -37,6 +45,7 @@ const handleSubmit =(newRow) =>{
           setModalOpen(false);
       }}
       onSubmit={handleSubmit}
+      defaultValue={rowToEdit!==null &&rows[rowToEdit]}
       />
       )}
       

@@ -2,12 +2,14 @@ import React,{useState} from "react";
 
 import "./Modal.css";
 
-export const Modal=({closerModal,onSubmit})=>{
-    const[formState,setFormState]=useState({
+export const Modal=({closerModal,onSubmit,defaultValue})=>{
+    const[formState,setFormState]=useState(
+        defaultValue ||{
         page:"",
         description:"",
         status:"live"
-    });
+    }
+    );
     const [errors,setErrors]=useState("")
 
     const validateForm=()=>{
@@ -18,7 +20,7 @@ export const Modal=({closerModal,onSubmit})=>{
             let errorFields=[];
             for(const [key,value] of Object.entries(formState)){
                 if(!value){
-                    errorFields(key)
+                    errorFields.push(key)
                 }
             }
             setErrors(errorFields.join(", "));
@@ -72,7 +74,7 @@ export const Modal=({closerModal,onSubmit})=>{
                         <option value="error">Error</option>
                     </select>
                 </div>
-                {errors &&<div>{`Please include: ${errors}`}</div>}
+                {errors &&<div className="error">{`Please include: ${errors}`}</div>}
                 <button type="submit" className="btn" onClick={handleSubmit}>Submit</button>
             </form>
         </div>

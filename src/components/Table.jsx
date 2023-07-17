@@ -4,7 +4,7 @@ import React from "react";
 
 import "./Table.css";
 
-export const Table=({rows,deleteRow})=>{
+export const Table=({rows,deleteRow,editRow})=>{
     return<dev className="table-wrapper">
         <table className="table">
             <thead>
@@ -20,7 +20,8 @@ export const Table=({rows,deleteRow})=>{
                     rows.map((row,idx)=>{
                         const statusText=
                             row.status.charAt(0).toUpperCase() +row.status.slice(1);
-                      return <tr key={idx}>
+                      return (
+                      <tr key={idx}>
                         <td>{row.page}</td>
                          <td className="expand">{row.description}</td>
                          <td>
@@ -29,10 +30,11 @@ export const Table=({rows,deleteRow})=>{
                     <td>
                     <span className="actions">
                     <button className="delete-btn" onClick={()=>deleteRow(idx)}>Delete</button>
-                    <button>Edit</button>
+                    <button onClick={()=>editRow(idx)}>Edit</button>
                         </span>
                     </td>
-                      </tr>  
+                      </tr>
+                      ); 
                     })}
                     
                
