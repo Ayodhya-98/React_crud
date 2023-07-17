@@ -8,6 +8,23 @@ export const Modal=({closerModal,onSubmit})=>{
         description:"",
         status:"live"
     });
+    const [errors,setErrors]=useState("")
+
+    const validateForm=()=>{
+        if(formState.page && formState.description ** formState.status){
+           setErrors("")
+            return true;
+        } else{
+            let errorFields=[];
+            for(const [key,value] of Object.entries(formState)){
+                if(!value){
+                    errorFields(key)
+                }
+            }
+            setErrors(errorFields.join(", "));
+            return false;
+        }
+    };
 
     
 
@@ -21,7 +38,9 @@ export const Modal=({closerModal,onSubmit})=>{
     const handleSubmit =(e) =>{
         e.preventDefault();
 
-        onSubmit(formState)
+        if(!validateForm()) return;
+
+        onSubmit(formState);
 
         closerModal();
     };
@@ -53,6 +72,7 @@ export const Modal=({closerModal,onSubmit})=>{
                         <option value="error">Error</option>
                     </select>
                 </div>
+                {errors &&<div>{`Please include: ${errors}`}</div>}
                 <button type="submit" className="btn" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
